@@ -1,0 +1,31 @@
+function mensajeValoracion ()
+    {
+        var valoracion=document.getElementById("valoracion").value; 
+        
+        alert("Has valorado con "+valoracion+" puntos");
+    }
+ 
+    function mensajeCuenta()
+    {
+        var pais=document.getElementById("pais").value; 
+        var iban=document.getElementById("iban").value; 
+        var entidad=document.getElementById("entidad").value; 
+        var sucursal=document.getElementById("sucursal").value; 
+        var dc=document.getElementById("dc").value; 
+        var cuenta=document.getElementById("cuenta").value; 
+ 
+        alert("Le informamos que su cuenta bancaria es: "+pais+iban+"-"+entidad+"-"+sucursal+"-"+dc+"-"+cuenta);
+    }
+ 
+    function mensajeFecha ()
+    {
+        var d=new Date(document.getElementById("fechaEncuesta").value);
+ 
+        var semana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+        console.log(semana)
+ 
+        var n=semana[d.getDay()];
+        document.getElementById("fechaEncuesta").innerHTML=n;
+ 
+        alert("La fecha seleccionada en el elemento de fecha es un "+ n);
+    }
